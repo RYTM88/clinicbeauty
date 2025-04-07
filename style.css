@@ -1,0 +1,506 @@
+/* --- 基本設定 --- */
+:root {
+    --theme-color: #00a9a7; /* サイトのメインカラー (仮) */
+    --text-color: #333;
+    --lightgray-bg: #f7f7f7;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #777;
+    --border-color: #ddd;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+    background-color: var(--white-color);
+    font-size: 16px; /* ベースフォントサイズ */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; /* or bottom */
+}
+
+a {
+    text-decoration: none;
+    color: var(--theme-color);
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1120px; /* 元サイトのコンテナ幅に近づける */
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem; /* 32px */
+    margin-bottom: 60px;
+    font-weight: bold;
+    color: var(--text-color); /* 元サイトに合わせるなら黒系 */
+}
+
+.bg-lightgray {
+    background-color: var(--lightgray-bg);
+}
+
+.bg-theme {
+     background-color: var(--theme-color);
+     color: var(--white-color);
+}
+
+/* --- ヘッダー --- */
+.header {
+    background-color: var(--white-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky; /* スクロール追従させる場合 */
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+    color: var(--black-color); /* ロゴの色 */
+}
+.logo a:hover {
+    opacity: 1;
+}
+
+.global-nav ul {
+    display: flex;
+    gap: 30px; /* ナビ項目間のスペース */
+}
+
+.global-nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.9rem; /* 14.4px */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-button {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block; /* aタグなので */
+    font-size: 0.9rem;
+}
+.contact-button:hover {
+     opacity: 0.8;
+}
+
+.hamburger-menu {
+    display: none; /* PCでは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 21px;
+    position: relative;
+    z-index: 110; /* ナビより手前 */
+}
+.hamburger-menu span {
+    display: block;
+    background-color: var(--black-color);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.hamburger-menu span:nth-child(1) { top: 0; }
+.hamburger-menu span:nth-child(2) { top: 9px; }
+.hamburger-menu span:nth-child(3) { top: 18px; }
+
+/* --- ヒーローセクション --- */
+.hero {
+    height: 60vh; /* 高さを画面の60%に */
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+    /* 実際の背景画像を指定 */
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('placeholder-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem; /* 44.8px */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.1rem; /* 17.6px */
+}
+
+/* --- 事業内容 --- */
+.service-items {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between; /* 均等配置 */
+    text-align: center;
+}
+
+.service-item {
+    flex: 1; /* 幅を均等に */
+    padding: 30px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.service-item-icon {
+    margin-bottom: 20px;
+    /* アイコンの色やスタイル */
+     display: inline-flex; /* アイコンを中央揃えしやすくする */
+     justify-content: center;
+     align-items: center;
+     width: 100px; /* 例 */
+     height: 100px; /* 例 */
+     background-color: var(--theme-color); /* 仮の背景色 */
+     border-radius: 50%;
+}
+.service-item-icon img { /* アイコン画像用 */
+    width: 50%; /* アイコンサイズ調整 */
+    height: 50%;
+    object-fit: contain;
+}
+
+
+.service-item h3 {
+    font-size: 1.3rem; /* 20.8px */
+    margin-bottom: 15px;
+    color: var(--theme-color);
+}
+
+/* --- 私たちの強み --- */
+.strength-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+.strength-item:last-child {
+    margin-bottom: 0;
+}
+
+.strength-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.strength-item-img {
+    flex: 0 0 45%; /* 画像の幅を固定 */
+    border-radius: 8px;
+    overflow: hidden;
+}
+.strength-item-img img {
+    display: block;
+    width: 100%;
+}
+
+.strength-item-text {
+    flex: 1; /* 残りの幅をテキストが取る */
+}
+
+.strength-item-text h3 {
+    font-size: 1.6rem; /* 25.6px */
+    margin-bottom: 15px;
+    border-left: 5px solid var(--theme-color);
+    padding-left: 15px;
+}
+
+/* --- お知らせ --- */
+.news-list {
+    border-top: 1px solid var(--border-color);
+}
+
+.news-list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-list time {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    flex-shrink: 0; /* 日付が縮まないように */
+}
+
+.news-category {
+    background-color: var(--gray-color);
+    color: var(--white-color);
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    white-space: nowrap; /* カテゴリ名が改行しないように */
+}
+/* カテゴリごとに色を変えるならクラスを追加 */
+/* .news-category.press { background-color: #somecolor; } */
+
+.news-list a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+.news-list a:hover {
+    color: var(--theme-color);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+    font-weight: bold;
+    border-radius: 5px;
+}
+.button-link:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    opacity: 1;
+}
+
+/* --- CTA --- */
+.cta {
+    text-align: center;
+}
+.cta-container h2 {
+     font-size: 1.8rem;
+     margin-bottom: 15px;
+}
+.cta-container p {
+    margin-bottom: 30px;
+}
+.button-link-white {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: var(--white-color);
+    color: var(--theme-color);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+.button-link-white:hover {
+     opacity: 0.9;
+}
+
+/* --- フッター --- */
+.footer {
+    background-color: #333; /* フッターの背景色 */
+    color: var(--white-color);
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 上揃え */
+    padding-bottom: 40px;
+    border-bottom: 1px solid #555; /* 区切り線 */
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* ロゴの色調整 */
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* 折り返し */
+    gap: 15px 30px; /* 縦横の隙間 */
+    justify-content: flex-end; /* 右寄せ */
+}
+
+.footer-nav a {
+    color: var(--white-color);
+    font-size: 0.9rem;
+}
+.footer-nav a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa; /* コピーライトの文字色 */
+}
+
+
+/* --- レスポンシブ対応 (簡単な例) --- */
+@media (max-width: 991px) {
+    .strength-item,
+    .strength-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center; /* スマホでは中央寄せにする場合 */
+    }
+     .strength-item-img {
+        flex-basis: auto; /* 幅固定を解除 */
+        width: 80%; /* 画像幅を調整 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+    .strength-item-text h3 {
+        margin: 0 auto 15px; /* 中央寄せ */
+        display: inline-block; /* 中央寄せのため */
+        border-left: none;
+        padding-left: 0;
+        /* 必要なら下線などに変更 */
+         border-bottom: 3px solid var(--theme-color);
+         padding-bottom: 5px;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: center; /* 中央揃え */
+        gap: 30px;
+    }
+    .footer-nav ul {
+        justify-content: center; /* 中央揃え */
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 15px; /* スマホ用に少し小さく */
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .section-title {
+        font-size: 1.8rem; /* 28.8px */
+        margin-bottom: 40px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+
+    /* ヘッダー: ハンバーガーメニュー表示 */
+    .global-nav {
+        display: none; /* PC用ナビを隠す */
+        /* --- ↓ JSで is-open クラスが付いたら表示するスタイル --- */
+        /*
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding-top: 80px;
+        text-align: center;
+        */
+    }
+    /* .global-nav.is-open { display: block; } */ /* JSで制御 */
+    .global-nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .global-nav a {
+        font-size: 1.1rem;
+    }
+    .contact-button {
+        display: none; /* スマホではメニュー内に入れることが多い */
+    }
+    .hamburger-menu {
+        display: block; /* ハンバーガー表示 */
+    }
+    /* ハンバーガーメニューが開いた時のスタイル (JSで is-open クラスを付与) */
+    /*
+    .hamburger-menu.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger-menu.is-open span:nth-child(2) { opacity: 0; }
+    .hamburger-menu.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    */
+
+    .hero {
+        height: 70vh; /* スマホでは少し高めに */
+        min-height: 350px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem; /* 35.2px */
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .service-items {
+        flex-direction: column; /* 縦積み */
+        gap: 25px;
+    }
+    .service-item {
+        padding: 25px;
+    }
+
+    .news-list li {
+        flex-direction: column; /* 縦積み */
+        align-items: flex-start; /* 左揃え */
+        gap: 8px;
+    }
+    .news-list time {
+        font-size: 0.85rem;
+    }
+    .news-category {
+         margin-bottom: 5px;
+    }
+    .news-list a {
+         font-size: 1rem;
+    }
+
+    .cta-container h2 {
+        font-size: 1.6rem;
+    }
+    .button-link-white {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+     .footer-nav ul {
+        gap: 10px 20px; /* スマホでは隙間を少し詰める */
+    }
+}

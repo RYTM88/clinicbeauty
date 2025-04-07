@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Smile Inc. (デザイン再現)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <!-- ロゴ画像またはテキスト -->
+                    We Smile Inc. (再現)
+                </a>
+            </div>
+            <nav class="global-nav" id="global-nav">
+                <ul>
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#">事業内容</a></li>
+                    <li><a href="#">私たちの強み</a></li>
+                    <li><a href="#">会社情報</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">採用情報</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="#" class="contact-button">お問い合わせ</a>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="メニューを開く" aria-controls="global-nav" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>笑顔をつなぐ、未来を創る。</h1>
+                <p>私たちはITの力で、人と社会をもっと笑顔にします。</p>
+            </div>
+            <!-- 背景画像はCSSで設定 -->
+        </section>
+
+        <section class="service section-padding">
+            <div class="container">
+                <h2 class="section-title">事業内容</h2>
+                <div class="service-items">
+                    <div class="service-item">
+                        <div class="service-item-icon">
+                            <!-- アイコン用スペース (後で画像やSVGに) -->
+                            <img src="placeholder-icon.png" alt="" width="80" height="80">
+                        </div>
+                        <h3>システム開発</h3>
+                        <p>業務効率化から新規事業まで、最適なシステムをご提案します。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item-icon">
+                           <img src="placeholder-icon.png" alt="" width="80" height="80">
+                        </div>
+                        <h3>Webサイト制作</h3>
+                        <p>企画・デザイン・開発・運用までワンストップで支援します。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-item-icon">
+                           <img src="placeholder-icon.png" alt="" width="80" height="80">
+                        </div>
+                        <h3>ITコンサルティング</h3>
+                        <p>お客様の課題解決に向けた最適なIT戦略を立案します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="strengths section-padding bg-lightgray">
+            <div class="container">
+                <h2 class="section-title">私たちの強み</h2>
+                <div class="strength-item">
+                    <div class="strength-item-img">
+                        <img src="placeholder-img.jpg" alt="強み1の画像">
+                    </div>
+                    <div class="strength-item-text">
+                        <h3>顧客第一主義</h3>
+                        <p>常にお客様の視点に立ち、期待を超える価値を提供します。密なコミュニケーションを大切にし、最適なソリューションを追求します。</p>
+                    </div>
+                </div>
+                <div class="strength-item reverse">
+                     <div class="strength-item-img">
+                        <img src="placeholder-img.jpg" alt="強み2の画像">
+                    </div>
+                   <div class="strength-item-text">
+                        <h3>技術力と提案力</h3>
+                        <p>最新技術の探求と、それを活かした課題解決策の提案力に自信があります。お客様のビジネス成長を技術で支えます。</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                     <div class="strength-item-img">
+                        <img src="placeholder-img.jpg" alt="強み3の画像">
+                    </div>
+                    <div class="strength-item-text">
+                        <h3>チームワーク</h3>
+                        <p>多様な専門性を持つメンバーが連携し、プロジェクトを成功に導きます。互いを尊重し、協力し合う文化が根付いています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news section-padding">
+            <div class="container">
+                 <h2 class="section-title">お知らせ</h2>
+                 <ul class="news-list">
+                    <li>
+                        <time datetime="2023-10-27">2023.10.27</time>
+                        <span class="news-category">プレスリリース</span>
+                        <a href="#">新しいサービスを開始しました。</a>
+                    </li>
+                     <li>
+                        <time datetime="2023-10-20">2023.10.20</time>
+                        <span class="news-category">お知らせ</span>
+                        <a href="#">オフィス移転のお知らせ。</a>
+                    </li>
+                     <li>
+                        <time datetime="2023-09-15">2023.09.15</time>
+                        <span class="news-category">イベント</span>
+                        <a href="#">〇〇展示会に出展しました。</a>
+                    </li>
+                 </ul>
+                 <div class="view-more">
+                     <a href="#" class="button-link">もっと見る</a>
+                 </div>
+            </div>
+        </section>
+
+         <section class="cta section-padding bg-theme">
+            <div class="container cta-container">
+                <h2>お問い合わせ</h2>
+                <p>サービスに関するご相談、お見積もりなど、お気軽にお問い合わせください。</p>
+                <a href="#" class="button-link-white">お問い合わせフォームへ</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                     We Smile Inc. (再現)
+                </div>
+                <nav class="footer-nav">
+                     <ul>
+                        <li><a href="#">トップ</a></li>
+                        <li><a href="#">事業内容</a></li>
+                        <li><a href="#">私たちの強み</a></li>
+                        <li><a href="#">会社情報</a></li>
+                        <li><a href="#">お知らせ</a></li>
+                        <li><a href="#">採用情報</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="copyright">© We Smile Inc. All Rights Reserved. (この表記は再現用です)</p>
+        </div>
+    </footer>
+
+    <!-- JavaScriptは別途記述が必要です -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>
